@@ -1,88 +1,278 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="website for delegate.ai">
-    <meta name="author" content="krishnan venkatasubramanian">
-    <link rel="icon" href="../../favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-    <title>Delegate.ai</title>
+    <title>delegate.ai: office assistant</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Styles -->
+    <link href="assets/css/core.min.css" rel="stylesheet">
+    <link href="assets/css/thesaas.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/cover.css" rel="stylesheet">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Favicons -->
+    <!-- <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png"> -->
+    <!-- <link rel="icon" href="assets/img/favicon.png"> -->
   </head>
 
-  <body>
+  <body id="home">
 
-    <div class="site-wrapper">
 
-      <div class="site-wrapper-inner">
+    <!-- Topbar -->
+    <nav class="topbar topbar-expand-sm topbar-sticky">
+      <div class="container">
+        
+        <div class="topbar-left">
+          <button class="topbar-toggler">&#9776;</button>
+          <a class="topbar-brand" href="index.html" style="font-size:1.5rem !important; font-weight: bold; color: #416fa7;">
+            DELEGATE
+          </a>
+        </div>
 
-        <div class="cover-container">
 
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">delegate.ai</h3>
-              
-            </div>
+        <div class="topbar-right">
+          <ul class="topbar-nav nav">
+            <li class="nav-item"><a class="nav-link" href="#" data-scrollto="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-scrollto="section-features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf4hqVKBpCcAPlaZW-Oi1sKawuwec5OBcr0aHhGxXHrxuTdrQ/viewform?usp=sf_link">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf4hqVKBpCcAPlaZW-Oi1sKawuwec5OBcr0aHhGxXHrxuTdrQ/viewform?usp=sf_link">Login</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <!-- END Topbar -->
+
+
+
+
+    <!-- Header -->
+    <header class="header h-fullscreen" style="background-image: linear-gradient(150deg, #fdfbfb 0%, #eee 100%);">
+      <div class="container-wide">
+
+        <div class="row h-full align-items-center text-center text-lg-left">
+
+          <div class="offset-1 col-10 col-lg-4 offset-lg-1">
+            <h1>Personalized office assistant</h1>
+            <br>
+            <p class="lead mx-auto">Persona is an office assistant which schedules meetings, retrieves information and manages you work tasks.</p>
+            <br>
+            <a class="btn btn-lg btn-success" href="https://docs.google.com/forms/d/e/1FAIpQLSf4hqVKBpCcAPlaZW-Oi1sKawuwec5OBcr0aHhGxXHrxuTdrQ/viewform?usp=sf_link">Get Started</a>
+            <p class="pt-8"><small>Already a delegate.ai member? <a class="text-muted" href="https://docs.google.com/forms/d/e/1FAIpQLSf4hqVKBpCcAPlaZW-Oi1sKawuwec5OBcr0aHhGxXHrxuTdrQ/viewform?usp=sf_link">Sign in</a></small></p>
           </div>
 
-          <div class="inner cover">
-            <span class="cover-heading"></span>
-            <p class="lead" style="margin-top:5%;color:#CECED5;">delegate.ai is a personal assistant which can handle phone calls, messages and emails for you.</p>
-            <div id="siri-container"></div>
-            <p class="lead">
-              <a href="https://goo.gl/forms/k5pmJXhWX3z1ImLq2" class="btn btn-lg btn-primary outline">We release in August 2017 - get on the list</a>
-            </p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Made by <a href="http://delegate.ai">delegate.ai</a>, 2017.</p>
-            </div>
+          <div class="col-12 col-lg-6 offset-lg-1 img-right hidden-md-down">
+            <img class="shadow-4" src="assets/img/demo/slack/dashboard.png" alt="...">
           </div>
 
         </div>
 
       </div>
+    </header>
+    <!-- END Header -->
 
-    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/wave.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-    <script>
-        $(function(){
-            $(".cover-heading").typed({
-              strings: ["Persona, call harvey and schedule a meeting with him at 6 pm next monday"],
-              typeSpeed: 5
-            });
-        });
-    </script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/ie.js"></script>
+
+
+    <!-- Main container -->
+    <main class="main-content">
+
+
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section" id="section-features">
+        <div class="container">
+          <header class="section-header">
+            <small>Features</small>
+            <h2>Office Assistant for the 21st century.</h2>
+            <hr>
+          </header>
+
+
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-5 text-center">
+              <img src="assets/img/demo/slack/resource.png" alt="...">
+            </div>
+
+            <div class="col-12 offset-md-1 col-md-6">
+              <h5>Schedules meetings and manages office resources on your behalf</h5>
+              <p>Persona talks to your contacts and schedules meetings for you giving you superpowers.</p>
+              <p>It communicates over call, email, slack as well as your propritory office channel using natural language for a seamless experience.</p>
+              <p>Persona has built in workflows to manage office resources such as meeting rooms.</p>
+            </div>
+          </div>
+
+
+          <hr class="w-200 my-90">
+
+
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-6">
+              <h5>A knowledge base you can talk to</h5>
+              <p>Persona learns facts and information from your current knowledge bases such as Google Drive, Documents as well you telling it.</p>
+              <p>It automatically answers queries asked in natural language and helps your team improve productivity</p>
+            </div>
+
+            <div class="col-12 offset-md-1 col-md-5 text-center">
+              <img src="assets/img/demo/slack/knowledge_base.png" alt="...">
+            </div>
+          </div>
+
+
+          <hr class="w-200 my-90">
+
+
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-5 text-center">
+              <img src="assets/img/demo/slack/platform.png" alt="...">
+            </div>
+
+            <div class="col-12 offset-md-1 col-md-6">
+              <h5>On all your platforms.</h5>
+              <p>Persona works out of the box with slack, email, voice call, sms, and skype.</p>
+              <p>It also integrates into your current systems with plug and play language modules</p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+
+
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section bg-gray">
+        <div class="container">
+          <div class="row gap-y">
+            
+            <div class="col-12 col-lg-4">
+              <div class="card card-bordered text-center">
+                <div class="card-block">
+                  <p><i class="icon-layers fs-50 text-muted"></i></p>
+                  <h4 class="card-title">Omnipresent</h4>
+                  <p class="card-text">Persona communicates over slack, email, voice call, sms and skype. Use our api to connect to you custom communication channel</p>
+                  <a class="fw-600 fs-12" href="#">Read more <i class="fa fa-chevron-right fs-9 pl-5"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-lg-4">
+              <div class="card card-bordered text-center">
+                <div class="card-block">
+                  <p><i class="icon-chat fs-50 text-muted"></i></p>
+                  <h4 class="card-title">Communicate naturally</h4>
+                  <p class="card-text">Converse in natural language to perform complex tasks. Get answers and tasks done faster.</p>
+                  <a class="fw-600 fs-12" href="#">Read more <i class="fa fa-chevron-right fs-9 pl-5"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-lg-4">
+              <div class="card card-bordered text-center">
+                <div class="card-block">
+                  <p><i class="fa fa-leanpub fs-50 "></i></p>
+                  <h4 class="card-title">Train</h4>
+                  <p class="card-text">Implement custom workflows using built-in language understanding capabilites. Teach with minimal examples - our engine works limited examples</p>
+                  <a class="fw-600 fs-12" href="#">Read more <i class="fa fa-chevron-right fs-9 pl-5"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Reclaim your workday
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section text-center">
+
+        <div class="row">
+          <div class="col-12 offset-md-3 col-md-6">
+            <h3 class="fw-900 mb-20">Offload time consuming repetative tasks.</h3>
+            <p class="lead text-muted">Delegate tasks such meeting scheduling, resource and knowledge base managed to Persona. Focus on what is important instead of grunt work. Become more productive. </p>
+            <br>
+            <a class="btn btn-lg btn-round btn-success" href="https://docs.google.com/forms/d/e/1FAIpQLSf4hqVKBpCcAPlaZW-Oi1sKawuwec5OBcr0aHhGxXHrxuTdrQ/viewform?usp=sf_link" >Start now</a>
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+
+    </main>
+    <!-- END Main container -->
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row gap-y align-items-center">
+          <div class="col-12 col-lg-3">
+            <p class="text-center text-lg-left">
+              <a href="index.html" style="font-size:1rem !important; font-weight: bold; color: #416fa7;">Delegate Inc.</a>
+            </p>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <ul class="nav nav-primary nav-hero">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="block-feature.html">Features</a>
+              </li>
+              <li class="nav-item hidden-sm-down">
+                <a class="nav-link" href="page-contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-lg-3">
+            <div class="social text-center text-lg-right">
+              <a class="social-linkedin" href="https://twitter.com/thethemeio"><i class="fa fa-linkedin"></i></a>
+              <a class="social-twitter" href="https://twitter.com/thethemeio"><i class="fa fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END Footer -->
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/core.min.js"></script>
+    <script src="assets/js/thesaas.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
   </body>
 </html>
-<!-- 185.53.177.20 -->
