@@ -9,7 +9,7 @@
 
   var thesaas = {
     name:       'TheSaaS',
-    version:    '1.4.0',
+    version:    '1.4.6',
   };
 
   thesaas.defaults = {
@@ -92,7 +92,13 @@
     thesaas.shuffle();
 
 
+    // Lightbox
     $(document).on('click', '[data-provide~="lightbox"]', lity);
+
+
+    // Object fit
+    // 
+    objectFitPolyfill( $('.bg-video') );
 
 
     // Video-wrapper
@@ -153,7 +159,8 @@
     // 
     $(document).on( 'click', '.drawer-toggler, .drawer-close, .drawer-backdrop', function() {
       $('body').toggleClass( 'drawer-open' );
-    } );
+    });
+
 
 
   };
@@ -399,7 +406,7 @@
     AOS.init({
       offset: 220,
       duration: 1500,
-      disable: 'mobile',
+      //disable: 'mobile',
       //startEvent: 'load',
     });
 
@@ -493,6 +500,21 @@
   thesaas.typed = function() {
 
     $('[data-type]').each(function(){
+      var strings = $(this).data('type').split(',');
+      var options = {
+        strings: strings,
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 800,
+        loop: true
+      };
+
+      options = $.extend( options, thesaas.getDataOptions($(this)) );
+      var typed = new Typed( $(this)[0], options );
+    });
+
+    /*
+    $('[data-type]').each(function(){
       var el = $(this);
       var strings = el.data('type').split(',');
       var options = {
@@ -506,6 +528,7 @@
 
       el.typed(options);
     });
+    */
 
   }
 
@@ -558,7 +581,7 @@
   // Mailer function
   //----------------------------------------------------/
   thesaas.mailer = function() {
-    
+
     var validEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     $('[data-form="mailer"]').each(function(){
@@ -628,7 +651,7 @@
   // Constellation
   //----------------------------------------------------/
   thesaas.constellation = function() {
-    var color = 'rgba(255, 255, 255, .8)',
+    var color    = 'rgba(255, 255, 255, .8)',
         distance = 120;
 
     if( $( window ).width() < 700) {
@@ -641,8 +664,13 @@
         color = 'rgba(0, 0, 0, .5)';
       }
 
+      var length = $(this).dataAttr( 'length', 100 );
+      var radius = $(this).dataAttr( 'radius', 150 );
+
       $( this ).constellation({
         distance: distance,
+        length: length,
+        radius: radius,
         star: {
           color: color,
           width: 1
@@ -662,11 +690,11 @@
   // Shuffle.js
   //----------------------------------------------------/
   thesaas.shuffle = function() {
-    if ( undefined === window['shuffle'] || 0 === $('[data-provide="shuffle"]').length ) {
+    if ( undefined === window['Shuffle'] || 0 === $('[data-provide="shuffle"]').length ) {
       return;
     }
 
-    var Shuffle = window.shuffle;
+    var Shuffle = window.Shuffle;
 
     Shuffle.options.itemSelector = '[data-shuffle="item"]';
     Shuffle.options.sizer = '[data-shuffle="sizer"]';
@@ -678,6 +706,7 @@
 
       var list = $(this).find('[data-shuffle="list"]');
       var filter = $(this).find('[data-shuffle="filter"]');
+      var search = $(this).find('[data-shuffle="search"]');
       var shuffleInstance = new Shuffle(list);
 
       if ( filter.length ) {
@@ -704,6 +733,17 @@
         });
 
       } //End if
+
+
+      if ( search.length ) {
+        search.on('keyup', function() {
+          var searchText = $(this).val().toLowerCase();
+          shuffleInstance.filter(function(element, shuffle) {
+            var itemText = element.textContent.toLowerCase().trim();
+            return itemText.indexOf(searchText) !== -1;
+          });
+        });
+      }
 
 
       $( this ).imagesLoaded( function() {
